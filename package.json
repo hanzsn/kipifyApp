@@ -10,8 +10,9 @@
     "dev:debug": "nodemon --inspect --max-old-space-size=8192 backend/server.js",
     "frontend": "http-server frontend -p 5500 -c-1",
     "dev:all": "concurrently \"npm run dev\" \"npm run frontend\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "set NODE_OPTIONS=--max-old-space-size=4096 && npx tailwindcss -i ./frontend/styles/input.css -o ./frontend/styles/output.css --watch"
+    "dev:css": "npx tailwindcss -i ./frontend/styles/input.css -o ./frontend/styles/output.css --watch",
+    "build": "npx tailwindcss -i ./frontend/styles/input.css -o ./frontend/styles/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
