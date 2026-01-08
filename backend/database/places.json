@@ -1,0 +1,154 @@
+[
+  {
+    "id": 101,
+    "name": "Banaue Rice Terraces",
+    "region": "Luzon",
+    "province": "Ifugao",
+    "category": "Natural Landmark",
+    "lat": 16.9312,
+    "lon": 121.1374,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Banaue_Rice_Terraces.JPG"
+  },
+  {
+    "id": 102,
+    "name": "Vigan",
+    "region": "Luzon",
+    "province": "Ilocos Sur",
+    "category": "Heritage Site",
+    "lat": 17.5745,
+    "lon": 120.3864,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Vigan_street.jpg"
+  },
+  {
+    "id": 103,
+    "name": "Taal Volcano & Tagaytay",
+    "region": "Luzon",
+    "province": "Batangas",
+    "category": "Natural Landmark",
+    "lat": 14.0021,
+    "lon": 120.9945,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Taal_volcano.jpg"
+  },
+  {
+    "id": 104,
+    "name": "Mount Pulag",
+    "region": "Luzon",
+    "province": "Benguet",
+    "category": "Mountain",
+    "lat": 16.5767,
+    "lon": 120.9571,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Mount_Pulag_Sunrise.JPG"
+  },
+  {
+    "id": 105,
+    "name": "Hundred Islands",
+    "region": "Luzon",
+    "province": "Pangasinan",
+    "category": "Island",
+    "lat": 16.2193,
+    "lon": 119.9401,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Hundred_Islands.jpg"
+  },
+
+  {
+    "id": 201,
+    "name": "Chocolate Hills",
+    "region": "Visayas",
+    "province": "Bohol",
+    "category": "Natural Landmark",
+    "lat": 9.8252,
+    "lon": 124.1548,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Chocolate_Hills_Bohol.JPG"
+  },
+  {
+    "id": 202,
+    "name": "Kawasan Falls",
+    "region": "Visayas",
+    "province": "Cebu",
+    "category": "Waterfall",
+    "lat": 9.816,
+    "lon": 123.3837,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Kawasan_Falls_Cebu.jpg"
+  },
+  {
+    "id": 203,
+    "name": "Boracay",
+    "region": "Visayas",
+    "province": "Aklan",
+    "category": "Island",
+    "lat": 11.9674,
+    "lon": 121.9246,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Boracay_white_beach.jpg"
+  },
+  {
+    "id": 204,
+    "name": "Kalanggaman Island",
+    "region": "Visayas",
+    "province": "Leyte",
+    "category": "Island",
+    "lat": 11.9526,
+    "lon": 124.4819,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Kalanggaman_Island.jpg"
+  },
+  {
+    "id": 205,
+    "name": "Magellan's Cross",
+    "region": "Visayas",
+    "province": "Cebu",
+    "category": "Historical Site",
+    "lat": 10.2932,
+    "lon": 123.902,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Magellan%27s_Cross_Cebu.jpg"
+  },
+
+  {
+    "id": 301,
+    "name": "Mount Apo",
+    "region": "Mindanao",
+    "province": "Davao",
+    "category": "Mountain",
+    "lat": 6.9833,
+    "lon": 125.2667,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Mount_Apo.jpg"
+  },
+  {
+    "id": 302,
+    "name": "Hinatuan Enchanted River",
+    "region": "Mindanao",
+    "province": "Surigao del Sur",
+    "category": "River",
+    "lat": 9.2019,
+    "lon": 126.0986,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Hinatuan_Enchanted_River.jpg"
+  },
+  {
+    "id": 303,
+    "name": "Camiguin Island",
+    "region": "Mindanao",
+    "province": "Camiguin",
+    "category": "Island",
+    "lat": 9.257,
+    "lon": 124.7254,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Camiguin_island.jpg"
+  },
+  {
+    "id": 304,
+    "name": "Siargao",
+    "region": "Mindanao",
+    "province": "Surigao del Norte",
+    "category": "Island",
+    "lat": 9.8471,
+    "lon": 126.045,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Siargao_beach.jpg"
+  },
+  {
+    "id": 305,
+    "name": "Lake Sebu",
+    "region": "Mindanao",
+    "province": "South Cotabato",
+    "category": "Lake",
+    "lat": 6.0333,
+    "lon": 124.95,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Lake_Sebu.jpg"
+  }
+]

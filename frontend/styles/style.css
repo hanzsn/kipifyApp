@@ -1,0 +1,272 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fff #000;
+}
+
+/* Chromium browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #40826d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #40826d;
+}
+
+.tripify-font {
+  font-family: "Righteous", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* underline animation */
+.animated-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin: 15px 5px 15px 0;
+  transition: color 0.3s ease;
+  color: white;
+}
+
+.rimg {
+  transform: rotate(20deg);
+}
+
+svg {
+  color: white;
+}
+
+.animated-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.animated-link:hover::after {
+  width: 100%;
+}
+
+.animated-link.active::after {
+  width: 100%;
+}
+
+.animated-link:hover {
+  transform: translateY(2px);
+  color: rgb(255, 255, 255);
+}
+
+/*.animated-link.active {
+  color: black;
+}*/
+
+.header-hidden {
+  transform: translateY(-64px);
+}
+
+/* ✨ ULTRA SMOOTH fade-in animations */
+.top,
+.left,
+.left-text,
+.right,
+.bot {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+/* Staggered animation delays for smooth cascade effect */
+.top.animate-in {
+  animation: fadeInTop 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+.left-text.animate-in {
+  animation: fadeInLeftText 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
+}
+
+.right.animate-in {
+  animation: fadeInRight 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.6s;
+}
+
+.bot.animate-in {
+  animation: fadeInBot 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+/* Smooth easing with overshoot for natural feel */
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0) scale(0.95);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 0.8;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(-80px, 0, 0) scale(0.95);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 0.8;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(80px, 0, 0) scale(0.95);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 0.8;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes fadeInBot {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0) scale(0.98);
+    filter: blur(2px);
+  }
+  60% {
+    opacity: 0.8;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes fadeInLeftText {
+  0% {
+    opacity: 0;
+    transform: translate3d(-80px, 0, 0) scale(0.95);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 0.8;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+/* bg shadow effect */
+.shadowybt {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.shadowyrt {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.shadowylt {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* GPU acceleration for slider images */
+#bgLayer,
+#sliderImage,
+.img-slider {
+  will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize header transitions */
+#mainHeader {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Reduce cost of backdrop-blur */
+.backdrop-blur-\[4px\] {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transform: translateZ(0);
+}
+
+/* Clean up will-change after animations */
+.animate-in {
+  animation-fill-mode: forwards;
+}
+
+/* Remove will-change after animation completes to free GPU resources */
+.top.animate-in,
+.left-text.animate-in,
+.right.animate-in,
+.bot.animate-in {
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 375px) {
+  #Home {
+    padding-top: 60px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .top,
+  .left,
+  .left-text,
+  .right,
+  .bot {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

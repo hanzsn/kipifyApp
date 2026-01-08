@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Mindanao Destinations - Tripify</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+    <app-mainmm></app-mainmm>
+    <section
+      class="relative grid h-full min-h-[28vh] grid-cols-1 gap-6 p-6 card-container md:grid-cols-2 lg:grid-cols-3 overflow-x-hidden"
+    >
+      <!-- Mindanao cards will load here -->
+    </section>
+    <app-footer></app-footer>
+
+    <script src="./components/MainMM.js"></script>
+    <script src="./components/MindanaoCardComponent.js"></script>
+    <script src="./components/Header.js"></script>
+    <script src="./components/Sidebar.js"></script>
+    <script src="./components/Footer.js"></script>
+    <script src="./src/UnderlineAnimation.js" defer></script>
+    <script src="./src/ToggleSidebar.js" defer></script>
+    <script src="./src/FadeIn.js" defer></script>
+    <script src="./src/DropDown.js" defer></script>
+
+    <script type="module">
+      import { loadMindanao } from "./src/LoadPlacesByRegion.js";
+
+      window.addEventListener("DOMContentLoaded", () => {
+        console.log("Loading Mindanao destinations...");
+        loadMindanao();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Destinations - Tripify</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+    <app-main></app-main>
+    <section
+      class="relative grid h-full min-h-[28vh] grid-cols-1 gap-6 p-6 card-container md:grid-cols-2 lg:grid-cols-3 overflow-x-hidden"
+    >
+      <!-- cards will load here -->
+    </section>
+    <app-footer></app-footer>
+
+    <script src="./components/Main.js"></script>
+    <script src="./components/Header.js"></script>
+    <script src="./components/Sidebar.js"></script>
+    <script src="./components/Footer.js"></script>
+    <script src="./components/Card.js"></script>
+    <script src="./src/UnderlineAnimation.js" defer></script>
+    <script src="./src/ToggleSidebar.js" defer></script>
+    <script src="./src/FadeIn.js" defer></script>
+    <script src="./src/DropDown.js" defer></script>
+
+    <!-- ES6 module scripts -->
+    <script type="module">
+      import { loadPlaces } from "./src/LoadPlaces.js";
+
+      window.addEventListener("DOMContentLoaded", () => {
+        console.log("Loading places from API...");
+        loadPlaces();
+      });
+    </script>
+  </body>
+</html>
