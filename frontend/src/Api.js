@@ -1,5 +1,11 @@
-// Api.js (Updated with Category Support)
-const API_BASE_URL = "http://localhost:3000/Api";
+// Api.js (Updated with Category Support + Auto Environment Detection)
+
+// Auto-detect environment
+const API_BASE_URL =
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1"
+    ? "http://localhost:3000/api" // Local development
+    : "/api"; // Production (Vercel)
 
 export const placesAPI = {
   getAllPlaces: async () => {
