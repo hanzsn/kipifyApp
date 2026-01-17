@@ -1,5 +1,5 @@
 // SearchScript.js - Search Page with Navigation to Category Pages
-const API_BASE_URL = "http://localhost:3000/Api";
+const API_BASE_URL = "/api";
 
 const searchInput = document.getElementById("searchInput");
 const regionFilter = document.getElementById("regionFilter");
@@ -21,6 +21,11 @@ async function loadPlaces() {
     noResults.classList.add("hidden");
 
     const response = await fetch(`${API_BASE_URL}/places`);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
     allPlaces = await response.json();
     filteredPlaces = allPlaces;
 
@@ -32,7 +37,7 @@ async function loadPlaces() {
   } catch (error) {
     console.error("Error loading places:", error);
     loadingSpinner.classList.add("hidden");
-    showError();
+    showError(error.message);
   }
 }
 
@@ -72,16 +77,11 @@ function displayResults(places) {
     .map(
       (place) => `
     <div class="overflow-hidden transition-transform duration-300 border border-gray-800 rounded-lg shadow-lg bg-black/30 backdrop-blur-sm hover:scale-105 hover:border-gray-700 cursor-pointer"
-         onclick="navigateToPlace('${place.category}', ${
-        place.id
-      }, '${place.name.replace(/'/g, "\\'")}')">
+         onclick="navigateToPlace('${place.category}', ${place.id}, '${place.name.replace(/'/g, "\\'")}')">
       <!-- Image -->
       <div class="relative h-48 overflow-hidden">
         <img
-          src="${
-            place.image_url ||
-            "https://images.pexels.com/photos/2474690/pexels-photo-2474690.jpeg?auto=compress&cs=tinysrgb&w=600"
-          }"
+          src="${place.image_url || "https://images.pexels.com/photos/2474690/pexels-photo-2474690.jpeg?auto=compress&cs=tinysrgb&w=600"}"
           alt="${place.name}"
           class="object-cover w-full h-full"
           onerror="this.src='https://images.pexels.com/photos/2474690/pexels-photo-2474690.jpeg?auto=compress&cs=tinysrgb&w=600'"
@@ -91,8 +91,8 @@ function displayResults(places) {
           place.region === "Luzon"
             ? "bg-pink-500/90 text-white"
             : place.region === "Visayas"
-            ? "bg-green-500/90 text-white"
-            : "bg-blue-500/90 text-white"
+              ? "bg-green-500/90 text-white"
+              : "bg-blue-500/90 text-white"
         }">
           ${place.region}
         </span>
@@ -122,7 +122,7 @@ function displayResults(places) {
         </div>
       </div>
     </div>
-  `
+  `,
     )
     .join("");
 }
@@ -176,7 +176,7 @@ function filterPlaces() {
 }
 
 // Show error message
-function showError() {
+function showError(errorMsg = "Unknown error") {
   resultsContainer.innerHTML = `
     <div class="col-span-full">
       <div class="p-8 text-center border border-red-800 rounded-lg bg-red-900/20">
@@ -184,13 +184,14 @@ function showError() {
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
         <h3 class="mb-2 text-xl font-semibold text-red-400">Failed to load places</h3>
-        <p class="mb-4 text-gray-400">Please check your connection and try again</p>
+        <p class="mb-4 text-gray-400">${errorMsg}</p>
         <button onclick="loadPlaces()" class="px-6 py-2 font-semibold text-white transition bg-red-600 rounded-lg hover:bg-red-700">
           Retry
         </button>
       </div>
     </div>
   `;
+  resultsContainer.classList.remove("hidden");
 }
 
 // Make navigateToPlace globally accessible
