@@ -2,7 +2,7 @@
   "name": "app",
   "version": "1.0.0",
   "type": "module",
-  "main": "tailwind.config.js",
+  "main": "backend/api/index.js",
   "scripts": {
     "start": "node backend/server.js",
     "start:debug": "node --inspect --max-old-space-size=8192 backend/server.js",
@@ -12,12 +12,13 @@
     "dev:all": "concurrently \"npm run dev\" \"npm run frontend\"",
     "dev:css": "npx tailwindcss -i ./frontend/styles/input.css -o ./frontend/styles/output.css --watch",
     "build": "npx tailwindcss -i ./frontend/styles/input.css -o ./frontend/styles/output.css --minify",
+    "seed": "node backend/utils/seedPlaces.js",
+    "seed:prod": "node -r dotenv/config backend/utils/seedPlaces.js dotenv_config_path=backend/.env.production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "compression": "^1.8.1",
     "cors": "^2.8.5",
@@ -37,5 +38,17 @@
     "nodemon": "^3.1.11",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
-  }
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanzsn/kipifyApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hanzsn/kipifyApp/issues"
+  },
+  "homepage": "https://github.com/hanzsn/kipifyApp#readme",
+  "description": ""
 }
