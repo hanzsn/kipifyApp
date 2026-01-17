@@ -37,7 +37,7 @@ class SidebarComponent extends HTMLElement {
                 </button>
                 <div class="sidebar-dropdown-menu hidden flex-col gap-2 pl-8 mt-2 overflow-hidden transition-all duration-300">
                     <a href="index.html#TopDestinations" class="hover:translate-x-1 transition-transform duration-200">Top Destinations</a>
-                    <a href="destinations.html" class="hover:translate-x-1 transition-transform duration-200">All Destinations</a>
+                    <a href="Destinations.html" class="hover:translate-x-1 transition-transform duration-200">All Destinations</a>
                     <a href="beach.html" class="hover:translate-x-1 transition-transform duration-200">Beaches & Islands</a>
                     <a href="mountain.html" class="hover:translate-x-1 transition-transform duration-200">Mountains & Nature</a>
                     <a href="city.html" class="hover:translate-x-1 transition-transform duration-200">Cities & Culture</a>
