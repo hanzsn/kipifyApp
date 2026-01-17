@@ -24,7 +24,7 @@ class HeaderComponent extends HTMLElement {
                     <a href="#" class="animated-link">Destinations</a>
                     <div class="menu-list absolute hidden gap-2 p-2 mt-2 rounded shadow-2xl bg-black font-semibold min-w-max">
                         <a href="index.html#TopDestinations" class="hover:bg-white/10 hover:backdrop-blur-[4px] hover:rounded hover:shadow px-2 whitespace-nowrap">Top Destinations</a>
-                        <a href="destinations.html#destinations" class="hover:bg-white/10 hover:backdrop-blur-[4px] hover:rounded hover:shadow px-2 whitespace-nowrap">All Destinations</a>
+                        <a href="Destinations.html#destinations" class="hover:bg-white/10 hover:backdrop-blur-[4px] hover:rounded hover:shadow px-2 whitespace-nowrap">All Destinations</a>
                         <a href="beach.html#beach" class="hover:bg-white/10 hover:backdrop-blur-[4px] hover:rounded px-2 whitespace-nowrap">Beaches & Islands</a>
                         <a href="mountain.html#mountain" class="hover:bg-white/10 hover:backdrop-blur-[4px] hover:rounded px-2 whitespace-nowrap">Mountains & Nature</a>
                         <a href="city.html#city" class="hover:bg-white/10 hover:backdrop-blur-[4px] hover:rounded px-2 whitespace-nowrap">Cities & Culture</a>
