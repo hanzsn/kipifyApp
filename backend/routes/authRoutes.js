@@ -5,7 +5,7 @@ import db from "../database/db.js";
 const router = express.Router();
 
 // Get admin password from environment variable
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "TripifyAdmin2025!";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "kipify@2026";
 
 // Test route (existing)
 router.get("/", async (req, res) => {

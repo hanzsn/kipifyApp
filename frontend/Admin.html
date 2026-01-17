@@ -13,38 +13,6 @@
   </head>
 
   <body class="min-h-screen text-white bg-gray-900">
-    <script>
-      const API_BASE_URL =
-        window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1"
-          ? "http://localhost:3000/api"
-          : "/api";
-
-      // Check if user has valid token
-      const token = sessionStorage.getItem("adminToken");
-
-      if (!token) {
-        window.location.href = "admin-login.html";
-      } else {
-        // Verify token with backend
-        fetch(`${API_BASE_URL}/auth/verify`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ token }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (!data.success) {
-              sessionStorage.removeItem("adminToken");
-              window.location.href = "admin-login.html";
-            }
-          })
-          .catch(() => {
-            sessionStorage.removeItem("adminToken");
-            window.location.href = "admin-login.html";
-          });
-      }
-    </script>
     <header
       class="top absolute top-0 flex items-center justify-around w-full h-16 gap-8 px-4 bg-black/20 backdrop-blur-[4px] shadow-xl z-30 transition-all duration-300 ease-in-out"
       id="mainHeader"

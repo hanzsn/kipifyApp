@@ -23,7 +23,7 @@ app.use(
       "http://127.0.0.1:5501",
     ],
     credentials: true,
-  })
+  }),
 );
 
 app.use(express.json());
@@ -34,9 +34,11 @@ app.use("/uploads", express.static("uploads"));
 // root route
 app.get("/", (req, res) => res.send("Backend is running!"));
 
+app.get("/api/debug", (req, res) => res.send("Debug route works"));
+
 // API routes
 app.use("/api/places", placesRouter);
-app.use("/api/test", testRouter);
+app.use("/api/auth", testRouter);
 
 app.get("/test-unsplash", async (req, res) => {
   const testPlace = req.query.place || "Boracay";
