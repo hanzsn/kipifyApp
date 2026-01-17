@@ -23,7 +23,6 @@ class HomeComponent extends HTMLElement {
                 Welcome to Tripify, your essential guide to the Philippines' unparalleled beauty.
                 We help you find your next great adventure. Start planning your perfect lakbay (journey) across the archipelago today.
             </p>
-            <outline-btn></outline-btn>
         </div>
 
         <div
