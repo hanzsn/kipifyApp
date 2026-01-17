@@ -20,15 +20,19 @@
       "dest": "/frontend/styles/$1"
     },
     {
-      "src": "/js/(.*)",
-      "dest": "/frontend/js/$1"
+      "src": "/src/(.*)",
+      "dest": "/frontend/src/$1"
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/frontend/assets/$1"
+      "src": "/components/(.*)",
+      "dest": "/frontend/components/$1"
     },
     {
-      "src": "/(.*\\.(css|js|jpg|jpeg|png|gif|svg|ico|webp|woff|woff2|ttf|eot|json))",
+      "src": "/public/(.*)",
+      "dest": "/frontend/public/$1"
+    },
+    {
+      "src": "/(.*\\.(html|css|js|jpg|jpeg|png|gif|svg|ico|webp|woff|woff2|ttf|eot|json))",
       "dest": "/frontend/$1"
     },
     {
